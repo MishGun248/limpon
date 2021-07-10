@@ -60,6 +60,9 @@ h1{
   margin-top: 30px;
   margin-bottom: 31px;
 }
+.content-app .title-h2{
+  margin-bottom: 36px;
+}
 .page-subscribe .title-h2 span{
   font-size: 14px;
 }
@@ -117,6 +120,7 @@ h1{
   border: 1px solid #1085e4;
   padding: 20px 60px;
   border-radius: 30px;
+  transition: 0.3s;
 }
 .btn-primary:hover{
   color: #1085e4;
@@ -132,6 +136,7 @@ h1{
   border: 1px solid #cbdbe8;
   padding: 20px 30px;
   border-radius: 30px;
+  transition: 0.3s;
 }
 .btn-secondary:hover{
   background-color: #fff;
@@ -141,6 +146,7 @@ h1{
   letter-spacing: 1.7px;
   color: #fff;
   padding: 21px 56px;
+  transition: 0.3s;
 }
 .btn-info{
   font-size: 12px;
@@ -152,6 +158,7 @@ h1{
   border:  1px solid #dce1e5;
   padding: 20px 60px;
   border-radius: 30px;
+  transition: 0.3s;
 }
 .btn-info:hover{
   color: #fff;
@@ -202,6 +209,8 @@ h1{
                        "e f g"
                        "e h h";
  max-width: 1110px;
+ grid-gap: 35px;
+ grid-template-columns: 1fr 1fr 1fr; /*Три колонки и у них одинаковая ширина*/
  margin: 0 auto;
 }
 .grid-title{
@@ -210,32 +219,51 @@ h1{
 .grid-item-1{
   grid-area: b;
   margin: 127px 0 0 0;
-  padding: 53px 0 0 0;
+  padding: 46px 23px 63px;
 }
 .grid-item-2{
   grid-area: c;
   margin: 122px 0 0 0;
-  padding: 53px 0 0 0;
+  padding: 38px 23px 0;
 }
 .grid-item-3{
   grid-area: d;
+  padding: 24px 20px 0;
+}
+.grid-item-3 p{
+  font-weight: 600;
 }
 .grid-item-4{
   grid-area: e;
+  padding-top: 4px;
+  margin-bottom: 23px;
 }
 .grid-item-5{
   grid-area: f;
+  padding: 26px 0 59px;
 }
 .grid-item-6{
   grid-area: g;
+  padding: 26px 0 59px;
 }
 .grid-text{
   grid-area: h;
+  margin-left: 20px;
+}
+.grid-text p:last-child{
+  font-size: 14px;
+  color:#1085e4;
+}
+.grid-text p span{
+  font-size: 16px;
+  font-weight: bold;
+  color:#192b59;
 }
 .grid h2{
   font-size: 40px;
   font-weight: 700;
   color: #192b59;
+  padding-top: 84px;
 }
 .grid h2 span{
   font-size: 14px;
@@ -256,42 +284,197 @@ h1{
 .grid-item a{
   font-size: 14px;
   font-weight: 600;
-  color:1085e4;
+  color:#1085e4;
 }
 .grid-icon{
   background-repeat: no-repeat;
   display: block;
+  height: 92px;
   margin: 0 auto 24px;
+  background-position: center;
 }
 .grid-icon-1{
   background-image: url(../img/features-icon2.png);
-  width: 79px;
-  height: 82px;
+  background-size: 73px 79px;
 }
 .grid-icon-2{
   background-image: url(../img/features-icon3.png);
-  width: 89px;
-  height: 85px;
+  background-size: 89px 85px;
+  padding-bottom: 10px;
 }
 .grid-icon-3{
   background-image: url(../img/features-icon1.png);
-  width: 73px;
-  height: 79px;
+  background-size: 73px 79px;
+  padding-bottom: 10px;
 }
 .grid-icon-4{
   background-image: url(../img/features-icon4.png);
-  width: 103px;
-  height: 92px;
+  background-size: 103px 92px;
+  padding-bottom: 10px;
 }
 .grid-icon-5{
   background-image: url(../img/features-icon5.png);
-  width: 85px;
-  height: 90px;
+  background-size: 85px 90px;
+  padding-bottom: 10px;
 }
 .grid-icon-6{
   background-image: url(../img/features-icon6.png);
-  width: 100px;
-  height: 87px;
+  background-size: 100px 87px;
+  padding-bottom: 10px;
+}
+.settings-icon{
+  display: block;
+  background-image: url(../img/software-icon.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  width: 117px;
+  height: 98px;
+  margin-left: -23px;
+}
+.page-software-flex{
+  display: flex;
+  justify-content: flex-end;
+}
+.page-software-flex div{
+  flex-basis: 54%;
+  margin-left: -24px;
+}
+.software-pic{
+  display: block;
+  width: 937px;
+  height: 986px;
+  background-image:url(../img/software-pic.png);
+  background-size:100% 100%;
+  background-position: 0 0;
+  position: absolute;
+  left:-13px;
+  bottom: 0px;
+}
+.page-software .title-h2, .page-analytics .title-h2{
+  max-width: 766px;
+  margin-top: 8px;
+  margin-bottom: 25px;
+}
+.page-software-list{
+  margin-top:28px;
+  height: 323px; /*Указываем высоту для блока**/
+  overflow: hidden; /*Скрываем часть контента*/
+  overflow-y: scroll;
+}
+.page-software-list::-webkit-scrollbar {width: 4px; height: 4px;}
+.page-software-list::-webkit-scrollbar-button {background-color: #fff;}
+.page-software-list::-webkit-scrollbar-track-piece {background-color: #f3f6ff;}
+.page-software-list::-webkit-scrollbar-thumb {height:50px; background-color: #1085e4; border-radius: 10px;}
+
+.page-software-list dt{
+  font-weight: 700;
+  color: #5a6789;
+}
+.page-software-list dd{
+  font-size: 14px;
+  margin-left: 0;
+  margin-top: 10px;
+  margin-bottom: 49px;
+  line-height: 1.8;
+}
+.page-app-text{
+  font-size:16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #c4d2dd;
+  margin-top: 26px;
+  margin-bottom: 20px;
+  letter-spacing: 3.5px;
+}
+.page-app-list{
+  padding: 0;
+  list-style-type: none;
+  margin-left: -14px;
+}
+.page-app-list>li{
+  display: inline-block;
+}
+.page-app-list>li>a{
+  display: inline-block; /*Для того, чтобы стали в ряд*/
+}
+.page-app-list>li>a.page-app-android{
+  background-image: url(../img/app-android.png);
+  width: 187px;
+  height: 81px;
+  background-repeat: no-repeat;
+}
+.page-app-list>li>a.page-app-ios{
+  background-image: url(../img/app-ios.png);
+  width: 187px;
+  height: 81px;
+  background-repeat: no-repeat;
+}
+.content-app{
+  width: 55%;
+}
+.video-app{
+  position: absolute;
+  top: -58px;
+  right: -176px;
+}
+.flex-analytics{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex-analytics>div{
+  flex-basis: 54%;
+  margin-left: -24px;
+}
+.page-analytics img{
+  margin: 31px 0 10px -16px;
+}
+.page-analytics-text{
+  margin-bottom: 51px;
+}
+.page-analytics-btn{
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #1085e4;
+  border: 1px solid #1085e4;
+  padding: 20px 40px;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+.page-analytics-btn:hover{
+  color: #1085e4;
+  background-color: transparent;
+}
+.page-control img{
+  margin: 0px -30px -97px 0px;;
+}
+.page-control-icon{
+  margin: 33px 0 -38px -24px;
+  display: block;
+  background-image: url(../img/software-icon.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  width: 117px;
+  height: 98px;
+}
+.page-control .title-h2{
+  margin-top: 40px;
+  margin-bottom: 28px;
+}
+.page-control-text{
+  margin-bottom: 51px;
+}
+.flex-control{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex-control>div{
+  flex-basis: 54%;
+  margin: 22px 0 -22px 36px;
 }
 .list-stat{
   display: flex;
@@ -424,6 +607,7 @@ h1{
   position: absolute;
   top: 9px;
   right: 8px;
+  transition: 0.3s;
 }
 .box-subscribe-user button:hover{
   color: #1085e4;
@@ -443,6 +627,7 @@ h1{
 .box-subscribe-user input:-moz-placeholder           {color:#b1c3ee;}
 .box-subscribe-user input:-ms-input-placeholder      {color:#b1c3ee;}
 
+
 /* PAGE */
 .page-header{
   background-image: url(../img/header-bg.png);
@@ -456,6 +641,9 @@ h1{
   background-repeat: no-repeat;
   background-size: cover;
   padding: 106px 0 99px;
+}
+.page-grid{
+  padding-bottom: 94px;
 }
 .page-stat, .page-screen{
   background-color: #edf6ff;
@@ -474,4 +662,31 @@ h1{
   color: #fff;
   background: rgb(10,32,144);
   background: linear-gradient(160deg, rgba(10,32,144,1) 0%, rgba(35,119,205,1) 100%);
+}
+.page-software{
+  padding: 109px 0 171px 0;
+  position: relative;
+  overflow: hidden;
+  background-image: url(../img/software-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.page-app{
+  position: relative;
+  padding: 69px 0 75px;
+}
+.page-app .wrap{
+  position: relative;
+}
+.page-analytics{
+  background-image: url(../img/analytics-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 117px 0 137px 0;
+}
+.page-control{
+  background-image: url(../img/control-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 61px 0 161px 0;
 }
